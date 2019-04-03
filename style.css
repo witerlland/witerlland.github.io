@@ -1,0 +1,12 @@
+html, body{
+    width: 100% !important;
+    min-width: 100%;
+    height: auto;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+h1{
+    font-size: 2em;
+    color: #2c2c2c;
+}
