@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Witerlland Silva</title>
-</head>
-<body>
-    <h1>Witerlland Silva</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Witerlland Silva</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="wb-menu-container" >
+            <h1><a href="#home" >Witerlland Silva</a></h1>
+            <a href="#" class="btn" id="openMenu" >Menu</a>
+            <ul class="wb-menu" id="menu" >
+                <li><a href="#home" >Início</a></li>
+                <li><a href="#projetos" >Projetos</a></li>
+                <li><a href="#artigos" >Artigos</a></li>
+                <li><a href="#contato" >Contato</a></li>
+            </ul>
+        </div>
+        <div id="home" >
+            <h2>Um pouco sobre mim e minha carreira</h2>
+            <span><strong>Um programador apaixonado por design e games</strong></span>
+            <p>Texto da sessão contanto sobre o site/pessoa</p>
+            <a href="#projects" class="btn" >Veja mais</a>
+        </div>
+    </body>
+    <script>
+        var openMenu    = document.getElementById('openMenu');
+        var menu        = document.getElementById('menu');
+
+        openMenu.addEventListener("click", function(){
+            if(menu.classList.contains('active')){
+                removeClass(menu, 'active');
+            }else{
+                addClass(menu, 'active');
+            }
+        });
+    </script>
+    <script>
+        function addClass(element,className) {
+            var currentClassName = element.getAttribute("class");
+
+            if (typeof currentClassName!== "undefined" && currentClassName) {
+                element.setAttribute("class",currentClassName + " "+ className);
+            }
+            else {
+                element.setAttribute("class",className); 
+            }
+        }
+
+        function removeClass(element,className) {
+            var currentClassName = element.getAttribute("class");
+            
+            if (typeof currentClassName!== "undefined" && currentClassName) {
+
+                var class2RemoveIndex = currentClassName.indexOf(className);
+
+                if (class2RemoveIndex != -1) {
+                    var class2Remove = currentClassName.substr(class2RemoveIndex, className.length);
+
+                    var updatedClassName = currentClassName.replace(class2Remove,"").trim();
+
+                    element.setAttribute("class",updatedClassName);
+                }
+            }
+            else {
+                element.removeAttribute("class");   
+            } 
+        }
+    </script>
 </html>
