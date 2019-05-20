@@ -7,9 +7,10 @@
         <title>Witerlland Silva</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     </head>
     <body>
-        <div class="wb-menu-container" >
+        <nav class="wb-menu-container" >
             <h1><a href="#home" >Witerlland Silva</a></h1>
             <a href="#" class="btn" id="openMenu" >Menu</a>
             <ul class="wb-menu" id="menu" >
@@ -18,13 +19,48 @@
                 <li><a href="#artigos" >Artigos</a></li>
                 <li><a href="#contato" >Contato</a></li>
             </ul>
-        </div>
-        <div id="home" >
+        </nav>
+        <section id="home" >
             <h2>Um pouco sobre mim e minha carreira</h2>
             <span><strong>Um programador apaixonado por design e games</strong></span>
             <p>Texto da sessão contanto sobre o site/pessoa</p>
             <a href="#projects" class="btn" >Veja mais</a>
-        </div>
+        </section>
+        <section id="contato" >
+            <div>
+                <h2>Contato</h2>
+                <ul class="menuContato" >
+                    <li><i class="fas fa-street-view"></i> Barreiras - BA</li>
+                    <li>&nbsp;<i class="fas fa-mobile-alt"></i> &nbsp;(62) 9.9172-2604</li>
+                    <li><i class="far fa-envelope"></i> witerlland@outlook.com</li>
+                    <li>
+                        <ul class="menuSocial" >
+                            <li><a href="https://github.com/witerlland" ><i class="fab fa-github-square"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-dribbble-square"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-codepen"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href="#" ><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Deixe sua mensagem</h2>
+                <form >
+                    <div class="flexInput" >
+                        <input type="text" placeholder="Seu nome" >
+                        <input type="text" placeholder="Seu email" >
+                    </div>
+                    <div class="flexInput" >
+                        <textarea name="" id="" >
+                        </textarea>
+                    </div>
+                    <br>
+                    <a href="#projects" class="btn" >Enviar</a>
+                </form>
+            </div>
+        </section>
         <footer>
             <span>witerlland - 2019</span>
         </footer>

@@ -155,6 +155,92 @@ h1{
         transition: 0.3s ease-out;
     }
 
+#contato{
+    display: flex;
+    width: 100%;
+    height: auto;
+
+    padding: 15px;
+
+    background-color: #a1d2d9;
+    color: #FFF;
+
+    font-family: 'Quattrocento', serif;
+}
+    #contato div{
+        width: 50%;
+    }
+
+    #contato ul{
+        margin: 0;
+        padding: 0;
+    }
+    .menuContato li{
+        list-style-type: none;
+        font-size: 1.2em;
+        padding: 5px 0px;
+    }
+        .menuContato li i{
+            margin-right: 15px;
+        }
+    .menuSocial{
+        margin-top: 15px !important;
+    }
+    .menuSocial li{
+        display: inline-block;
+    }
+        .menuSocial a,
+        .menuSocial a:active,
+        .menuSocial a:hover,
+        .menuSocial a:visited{
+            text-decoration: none;
+            color: #FFF;
+            font-size: 1.5em;
+        }
+    
+    #contato form{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+        #contato form .flexInput{
+            display: flex;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+    #contato input[type="text"]{
+        width: 50%;
+        height: 4em;
+        margin: 0 5px 5px;
+        font-family: 'Oswald', sans-serif;
+        padding-left: 15px;
+        color: #2c2c2c4e;
+        border: 1px solid #9cc4e3;
+        /* border-color: #9cc4e3; */
+    }
+
+    #contato textarea{
+        width: 100%;
+        display: block;
+        margin: 5px;
+        height: 8em;
+        font-family: 'Oswald', sans-serif;
+        color: #2c2c2c4e;
+        padding: 15px 10px;
+        border: 1px solid #9cc4e3;
+    }
+
+@media screen and (max-width: 720px){
+    #contato{
+        display: block;
+    }
+    #contato div{
+        width: 100%;
+    }
+}
+
 footer{
     height: 2em;
     width: 100%;
