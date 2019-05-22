@@ -26,6 +26,68 @@
             <p>Texto da sessão contanto sobre o site/pessoa</p>
             <a href="#projects" class="btn" >Veja mais</a>
         </section>
+        <section id="projetos" >
+            <div class="projeto" >
+                <div class="info" >
+                    <h2>Projeto 1</h2>
+                    <p>
+                        Descrição do projeto
+                    </p>
+                    <ul>
+                        <li>Tecnologias</li>
+                    </ul>
+                    <a href="#projects" class="btn" >Veja mais</a>
+                </div>
+                <div class="image" >
+                    <img src="http://lorempixel.com/1920/1080/food" alt="Foto do projeto">
+                </div>
+            </div>
+            <div class="projeto" >
+                <div class="image" >
+                    <img src="http://lorempixel.com/1920/1080/food" alt="Foto do projeto">
+                </div>
+                <div class="info" >
+                    <h2>Projeto 2</h2>
+                    <p>
+                        Descrição do projeto
+                    </p>
+                    <ul>
+                        <li>Tecnologias</li>
+                    </ul>
+                    <a href="#projects" class="btn" >Veja mais</a>
+                </div>
+            </div>
+            <div class="projeto" >
+                <div class="info" >
+                    <h2>Projeto 3</h2>
+                    <p>
+                        Descrição do projeto
+                    </p>
+                    <ul>
+                        <li>Tecnologias</li>
+                    </ul>
+                    <a href="#projects" class="btn" >Veja mais</a>
+                </div>
+                <div class="image" >
+                    <img src="http://lorempixel.com/1920/1080/food" alt="Foto do projeto">
+                </div>
+            </div>
+            <div class="projeto" >
+                <div class="image" >
+                    <img src="http://lorempixel.com/1920/1080/food" alt="Foto do projeto">
+                </div>
+                <div class="info" >
+                    <h2>Projeto 4</h2>
+                    <p>
+                        Descrição do projeto
+                    </p>
+                    <ul>
+                        <li>Tecnologias</li>
+                    </ul>
+                    <a href="#projects" class="btn" >Veja mais</a>
+                </div>
+            </div>
+        </section>
         <section id="contato" >
             <div>
                 <h2>Contato</h2>
@@ -107,6 +169,31 @@
             else {
                 element.removeAttribute("class");   
             } 
+        }
+
+        var slideIndex = 0; // Valor inicial da contagem
+        slideStartGo(); // Chamada da funcao no loading da pagina
+        /*
+        * Funcao responsavel pelas transicoes
+        */
+        function slideStartGo(){
+            var i; // Contador inicial do looping
+            var slides = document.getElementsByClassName("projeto"); // Busca no doom os itens do slide
+            // Looping responsavel por mostrar os elementos corretos dentro do valor do index
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active'); //style.display = "none";
+                // slides[i].style.opacity = 0;
+                // removeClass(slides[i], 'active');
+            }
+            // Acrescenta o valor do index
+            slideIndex++;
+            if (slideIndex > slides.length){
+                slideIndex = 1
+            }
+            slides[slideIndex-1].classList.add('active');//style.display = "flex";
+            // slides[i].style.opacity = 1;
+            // addClass(slides[i], 'active');
+            setTimeout(slideStartGo, 6000); // Contador, a cada 4 segundos muda a imagem
         }
     </script>
 </html>

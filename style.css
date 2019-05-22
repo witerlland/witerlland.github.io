@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, .btn{
     font-family: 'Oswald', sans-serif;
 
     position: fixed;
+    z-index: 99999;
 }
 
 #openMenu{
@@ -154,6 +155,66 @@ h1{
 
         transition: 0.3s ease-out;
     }
+
+#projetos{
+    width: 100%;
+    height: 75vh;
+
+    overflow: hidden;
+
+    /* padding: 15px; */
+
+    background-color: #e0b9d8;
+
+    color: #FFF;
+    font-family: 'Quattrocento', serif;
+    position: relative;
+}
+    .projeto{
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        opacity: 0;
+        transition: all 0.5s ease-out;
+
+        display: flex;
+    }
+        .projeto.active{
+            transition: all 0.5s ease-in;
+            opacity: 1 !important;
+
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+
+            z-index: 9999;
+        }
+
+        .projeto .info{
+            width: 40%;
+            height: 100%;
+
+            padding: 25px;
+        }
+
+            .projeto h2{
+                margin: 0;
+            }
+
+        .projeto .image{
+            width: 60%;
+            height: 100%;
+
+            background-color: #FFF;
+            overflow: hidden;
+        }
+            .image img{
+                width: auto;
+                height: 100%;
+            }
 
 #contato{
     display: flex;
