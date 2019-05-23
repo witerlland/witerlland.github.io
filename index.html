@@ -88,6 +88,32 @@
                 </div>
             </div>
         </section>
+
+        <!-- Inicio da sessao de artigos -->
+        <section id="artigos" >
+            <h2>Meus artigos</h2>
+            <div class="artigos-container" >
+                <div class="artigo" >
+                    <a href="#" >
+                        <img src="http://lorempixel.com/1920/1080/food" alt="">
+                        <header>
+                            <h3>Título do artigo.</h3>
+                        </header>
+                        <p>
+                            Nam ut nisi sit amet ex sagittis dapibus. Vivamus eros ipsum, finibus ut purus eu, bibendum condimentum nibh. Ut ut nibh quis ante porta egestas at in purus. Fusce maximus, magna et volutpat feugiat, tellus eros aliquet erat, non mattis neque orci a massa. Sed porta dui ut massa ornare condimentum. Cras id posuere mauris, in malesuada diam. Vestibulum sollicitudin dignissim risus ac malesuada. Nunc posuere diam libero, id finibus eros ultricies ac. Curabitur dapibus risus odio, vitae laoreet nisl placerat id. Nullam quis mattis nunc. Etiam pharetra sem vestibulum velit finibus laoreet. Nulla ac accumsan nisi, at vulputate nisi. Maecenas ex ipsum, ornare vitae augue nec, finibus sagittis erat. Curabitur dolor erat, eleifend vel luctus sit amet, vehicula non lorem. Vestibulum at augue vitae eros pretium imperdiet. Donec ullamcorper euismod augue, id tempor eros. 
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Fim da sessao de artigos -->
+
+        <!-- Inicio da experiencia/curriculo -->
+        <section id="experiencia" >
+            
+        </section>
+        <!-- Fim da experiencia/curriculo -->
+
         <section id="contato" >
             <div>
                 <h2>Contato</h2>
@@ -195,5 +221,48 @@
             // addClass(slides[i], 'active');
             setTimeout(slideStartGo, 6000); // Contador, a cada 4 segundos muda a imagem
         }
+
+        // fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@witerllandsilva')
+        //     .then((res) => res.json())
+        //     .then((data) => {
+        //         console.log(data);
+        //         // Fillter the array
+        //         const res = data.items //This is an array with the content. No feed, no info about author etc..
+        //         const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+                
+        //         function toText(node) {
+        //             let tag = document.createElement('div')
+        //             tag.innerHTML = node
+        //             node = tag.innerText
+        //             return node
+        //         }
+        //         function shortenText(text,startingPoint ,maxLength) {
+        //         return text.length > maxLength?
+        //             text.slice(startingPoint, maxLength):
+        //             text
+        //         }
+                
+        //         let output = '';
+        //         posts.forEach((item) => {
+        //             output += `
+        //             <li class="blog__post">
+        //                 <a href="${item.link}">
+        //                 <img src="${item.thumbnail}" class="blog__topImg"></img>
+        //                 <div class="blog__content">
+        //                     <div class="blog_preview">
+        //                         <h2 class="blog__title">${shortenText(item.title, 0, 30)+ '...'}</h2>
+        //                         <p class="blog__intro">${'...' + shortenText(toText(item.content),60, 300)+ '...'}</p>
+        //                     </div>
+        //                     <hr>
+        //                     <div class="blog__info">
+        //                         <span class="blog__author">${item.author}</span>
+        //                         <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
+        //                     </div>
+        //                 </div>
+        //                 <a/>
+        //             </li>`
+        //         })
+        //         document.querySelector('.artigos-container').innerHTML = output
+        //     });
     </script>
 </html>
