@@ -230,9 +230,9 @@ h1{
     }
 
     .artigos-container{
-        width: 100%;
+        width: 80%;
         height: auto;
-
+        margin: auto;
         display: flex;
         /* justify-content: space-between; */
         flex-direction: row;
@@ -248,6 +248,13 @@ h1{
             flex-basis: 30%;
             /* flex-wrap: wrap; */
             margin: 10px auto;
+        }
+
+        @media (max-width: 860px){
+            .artigo{
+                width: 100%;
+                flex-basis: 100%;
+            }
         }
 
         .artigo a,
@@ -274,6 +281,137 @@ h1{
                 color: #2c2c2c7e;
                 padding: 0.5em;
             }
+
+#empregos{
+    width: 100%;
+    height: auto;
+
+    padding: 25px 15px 25px 15px;
+    margin: 0px;
+
+    background-color: #9cc4e3;
+
+    font-family: 'Quattrocento', serif;
+    color: #FFF; 
+}
+    #empregos h2{
+        font-size: 1.8em;
+        margin: 0;
+        text-align: center;
+    }
+
+    #empregos .empregos-container{
+        display: flex;
+        /* justify-content: space-between; */
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+
+    .emprego{
+        width: 70%;
+        border: 1px solid #9cc4e3c2;
+        box-shadow: 2px 2px 2px 3px rgba(0,0,0,0.2);
+        background-color: #FFF;
+        /* margin: 10px auto; */
+        color: #2c2c2c4e;
+        margin-top: 25px;
+        padding: 15px;
+        /* align-self: flex-end; */
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;  */
+    }
+
+    @media (max-width: 860px){
+        .emprego{
+            width: 100%;
+        }
+    }
+        .emprego.esquerda{
+            align-self: flex-start;
+        }
+        .emprego.direita{
+            align-self: flex-end;
+        }
+
+
+#equipe{
+    width: 100%;
+    height: auto;
+    padding: 25px 15px 25px 15px;
+    margin: 0px;
+    font-family: 'Quattrocento', serif;
+}
+    #equipe h2{
+        font-size: 1.8em;
+        margin: 0;
+        text-align: center;
+        color: #2c2c2c4e;
+    }
+
+    #equipe strong{
+        color: #2c2c2c;
+    }
+
+    .equipe-container{
+        width: 80%;
+        height: auto;
+        margin: auto;
+
+        display: flex;
+        /* justify-content: space-between; */
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .equipe .img{
+        width: 200px;
+        height: 200px;
+
+        border-radius: 361px;
+        border: 1px solid #9cc4e3;
+        
+        overflow: hidden;
+
+        margin: auto;
+    }
+        .equipe img{
+            width: auto;
+            height: 100%;
+        }
+
+    .equipe{
+        flex-basis: 25%;
+        margin: 10px auto;
+        /* border: 1px solid #9cc4e3; */
+    }
+
+    .equipe strong{
+        font-size: 1.2em;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .equipe ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    .equipe ul li{
+        list-style-type: none;
+    }
+
+    @media (max-width: 860px){
+        .equipe{
+            width: 100%;
+            flex-basis: 100%;
+        }
+    }
+
 #contato{
     display: flex;
     width: 100%;
