@@ -11,9 +11,9 @@
     </head>
     <body>
         <!-- Inicio do menu -->
-        <nav class="wb-menu-container" >
+        <nav class="wb-menu-container scrollTo" >
             <h1><a href="#home" >Witerlland Silva</a></h1>
-            <a href="#" class="btn" id="openMenu" >Menu</a>
+            <a href="" class="btn" id="openMenu" >Menu</a>
             <ul class="wb-menu" id="menu" >
                 <li><a href="#home" >Início</a></li>
                 <li><a href="#projetos" >Projetos</a></li>
@@ -25,10 +25,13 @@
 
         <!-- Inicio da chamada principal -->
         <section id="home" >
-            <h2>Um pouco sobre mim e minha carreira</h2>
-            <span><strong>Um programador apaixonado por design e games</strong></span>
-            <p>Texto da sessão contanto sobre o site/pessoa</p>
-            <a href="#projects" class="btn" >Veja mais</a>
+            <div>
+                <h2>Um pouco sobre mim e minha carreira</h2>
+                <p><strong>Um programador apaixonado por design e games</strong></p>
+                <p>Texto da sessão contanto sobre o site/pessoa</p>
+                <br>
+                <a href="#projects" class="btn" >Veja mais</a>
+            </div>
         </section>
         <!-- FIm da chamada principal -->
 
@@ -269,116 +272,5 @@
             <span>witerlland - 2019</span>
         </footer>
     </body>
-    <script>
-        var openMenu    = document.getElementById('openMenu');
-        var menu        = document.getElementById('menu');
-
-        openMenu.addEventListener("click", function(){
-            if(menu.classList.contains('active')){
-                removeClass(menu, 'active');
-            }else{
-                addClass(menu, 'active');
-            }
-        });
-    </script>
-    <script>
-        function addClass(element,className) {
-            var currentClassName = element.getAttribute("class");
-
-            if (typeof currentClassName!== "undefined" && currentClassName) {
-                element.setAttribute("class",currentClassName + " "+ className);
-            }
-            else {
-                element.setAttribute("class",className); 
-            }
-        }
-
-        function removeClass(element,className) {
-            var currentClassName = element.getAttribute("class");
-            
-            if (typeof currentClassName!== "undefined" && currentClassName) {
-
-                var class2RemoveIndex = currentClassName.indexOf(className);
-
-                if (class2RemoveIndex != -1) {
-                    var class2Remove = currentClassName.substr(class2RemoveIndex, className.length);
-
-                    var updatedClassName = currentClassName.replace(class2Remove,"").trim();
-
-                    element.setAttribute("class",updatedClassName);
-                }
-            }
-            else {
-                element.removeAttribute("class");   
-            } 
-        }
-
-        var slideIndex = 0; // Valor inicial da contagem
-        slideStartGo(); // Chamada da funcao no loading da pagina
-        /*
-        * Funcao responsavel pelas transicoes
-        */
-        function slideStartGo(){
-            var i; // Contador inicial do looping
-            var slides = document.getElementsByClassName("projeto"); // Busca no doom os itens do slide
-            // Looping responsavel por mostrar os elementos corretos dentro do valor do index
-            for (i = 0; i < slides.length; i++) {
-                slides[i].classList.remove('active'); //style.display = "none";
-                // slides[i].style.opacity = 0;
-                // removeClass(slides[i], 'active');
-            }
-            // Acrescenta o valor do index
-            slideIndex++;
-            if (slideIndex > slides.length){
-                slideIndex = 1
-            }
-            slides[slideIndex-1].classList.add('active');//style.display = "flex";
-            // slides[i].style.opacity = 1;
-            // addClass(slides[i], 'active');
-            setTimeout(slideStartGo, 6000); // Contador, a cada 4 segundos muda a imagem
-        }
-
-        // fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@witerllandsilva')
-        //     .then((res) => res.json())
-        //     .then((data) => {
-        //         console.log(data);
-        //         // Fillter the array
-        //         const res = data.items //This is an array with the content. No feed, no info about author etc..
-        //         const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
-                
-        //         function toText(node) {
-        //             let tag = document.createElement('div')
-        //             tag.innerHTML = node
-        //             node = tag.innerText
-        //             return node
-        //         }
-        //         function shortenText(text,startingPoint ,maxLength) {
-        //         return text.length > maxLength?
-        //             text.slice(startingPoint, maxLength):
-        //             text
-        //         }
-                
-        //         let output = '';
-        //         posts.forEach((item) => {
-        //             output += `
-        //             <li class="blog__post">
-        //                 <a href="${item.link}">
-        //                 <img src="${item.thumbnail}" class="blog__topImg"></img>
-        //                 <div class="blog__content">
-        //                     <div class="blog_preview">
-        //                         <h2 class="blog__title">${shortenText(item.title, 0, 30)+ '...'}</h2>
-        //                         <p class="blog__intro">${'...' + shortenText(toText(item.content),60, 300)+ '...'}</p>
-        //                     </div>
-        //                     <hr>
-        //                     <div class="blog__info">
-        //                         <span class="blog__author">${item.author}</span>
-        //                         <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
-        //                     </div>
-        //                 </div>
-        //                 <a/>
-        //             </li>`
-        //         })
-        //         document.querySelector('.artigos-container').innerHTML = output
-        //     });
-    </script>
+    <script src="scripts.js" type="text/javascript" ></script>
 </html>
