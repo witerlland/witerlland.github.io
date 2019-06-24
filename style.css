@@ -186,6 +186,14 @@ h1{
         padding: 5px;
     }
 
+    @media (max-width: 860px) {
+        .col-6{
+            width: 100%;
+            height: auto;
+            padding: 5px;
+        }
+    }
+
     /* .tec{
         width: 100%;
     }
