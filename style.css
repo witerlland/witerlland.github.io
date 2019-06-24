@@ -140,7 +140,7 @@ h1{
         transition: 0.3s ease-out;
     }
 
-#projetos{
+#sobre{
     width: 100%;
     height: auto;
 
@@ -149,172 +149,74 @@ h1{
 
     /* padding: 15px; */
 
-    /* background-color: #; */
+    background-color: #FFF;
 
-    color: #2c2c2ca5;
+    color: #2c2c2cdb;
     font-family: 'Quattrocento', serif;
 }
-    #projetos h2{
+    #sobre h2{
         font-size: 1.8em;
         margin: 0;
         text-align: center;
     }
 
-    #projetos .projeto-container{
+    #sobre h3{
+        margin: 0;
+        text-align: center;
+    }
+
+    .container{
         display: flex;
-        /* justify-content: space-between; */
-        flex-direction: row;
+        justify-content: space-between;
+        /* flex-direction: column; */
         justify-content: flex-start;
         flex-wrap: wrap;
         width: 80%;
         margin: auto;
     }
 
-    .projeto{
-        flex-basis: 30%;
-        height: 16em;
-        /* padding-top: 14em; */
-        margin: 10px auto;
-        border: 1px solid #2c2c2ca5;
-        box-shadow: 2px 2px 2px 3px #2c2c2c37;
-        background-color: #FFF;
-        position: relative;
-        overflow: hidden;
-    }
-        .projeto h3{
-            font-size: 1.2em;
-            margin: 0;
-            text-align: center;
-            color: #2c2c2ca5 !important;
-        }
-        .projeto a,
-        .projeto a:active,
-        .projeto a:visited{
-            text-decoration: none;
-            color: #2c2c2ca5 !important;
-        }
-
-        .projeto div{
-            width: 100%;
-            height: 100%;
-            background-color: #FFF;
-            color: #2c2c2c;
-
-            position: absolute;
-            padding: 1.2em;
-            padding-top: 0;
-            top: 14em;
-
-            transition: 0.2s ease-in;
-        }
-
-        .projeto div:hover{
-            transition: 0.2s ease-out;
-            top: 0;
-        }
-
-            .projeto div header{
-                text-align: center;
-                padding-top: 0.4em;
-            }
-
-    @media (max-width: 1080px){
-        .projeto{
-            flex-basis: 100%;
-            width: 100%;
-        }
-    }
-
-#tecnologias{
-    width: 100%;
-    height: auto;
-
-    padding: 25px 15px 25px 15px;
-    margin: 0px;
-
-    /* padding: 15px; */
-
-    background-color: #2c2c2cdb;
-
-    color: #FFF;
-    font-family: 'Quattrocento', serif;
-}
-    #tecnologias h2{
-        font-size: 1.8em;
-        margin: 0;
-        text-align: center;
-    }
-
-#artigos{
-    width: 100%;
-    height: auto;
-
-    padding: 25px 15px 25px 15px;
-    margin: 0px;
-
-    background-color: #a1d2d9;
-
-    font-family: 'Quattrocento', serif;
-    color: #FFF;
-}
-    #artigos h2{
-        font-size: 1.8em;
-        margin: 0;
-        text-align: center;
-    }
-
-    .artigos-container{
-        width: 80%;
+    img{
+        width: 100%;
         height: auto;
-        margin: auto;
-        display: flex;
-        /* justify-content: space-between; */
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-
     }
-        .artigo{
-            /* width: 20%; */
-            border: 1px solid #9cc4e3c2;
-            box-shadow: 2px 2px 2px 3px rgba(0,0,0,0.2);
-            background-color: #FFF;
-            flex-basis: 30%;
-            /* flex-wrap: wrap; */
-            margin: 10px auto;
-        }
 
-        @media (max-width: 860px){
-            .artigo{
-                width: 100%;
-                flex-basis: 100%;
-            }
-        }
+    .col-6{
+        width: 50%;
+        height: auto;
+        padding: 5px;
+    }
 
-        .artigo a,
-        .artigo a:active,
-        .artigo a:visited{
-            text-decoration: none;
-        }
-            .artigo img{
-                width: 100%;
-                height: auto;
-            }
+    /* .tec{
+        width: 100%;
+    }
 
-            .artigo header{
-                width: 100%;
-                padding: 0.2em;
-                text-align: center;
-            }
-                .artigo header h3{
-                    font-size: 1.4em;
-                    color: #9cc4e3;
-                    margin: 0;
-                }
-            .artigo p{
-                color: #2c2c2cdb;
-                padding: 0.5em;
-            }
+    /* Estilizacao das barras de tec skills */
+    /* .bar{
+        height: 25px;
+        position: relative;
+        background: #555;
+        padding: 10px;
+        width: 80%;
+    }
+        .bar span{
+            display: block;
+            height: 100%;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: rgb(43,194,83);
+            background-image: linear-gradient(
+              center bottom,
+              rgb(43,194,83) 37%,
+              rgb(84,240,84) 69%
+            );
+            box-shadow: 
+              inset 0 2px 9px  rgba(255,255,255,0.3),
+              inset 0 -2px 6px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        } */
 
 #empregos{
     width: 100%;
@@ -350,7 +252,7 @@ h1{
         box-shadow: 2px 2px 2px 3px rgba(0,0,0,0.2);
         background-color: #FFF;
         /* margin: 10px auto; */
-        color: #2c2c2c4e;
+        color: #2c2c2cdb;
         margin-top: 25px;
         padding: 15px;
         /* align-self: flex-end; */
@@ -371,80 +273,6 @@ h1{
         .emprego.direita{
             align-self: flex-end;
         }
-
-
-#equipe{
-    width: 100%;
-    height: auto;
-    padding: 25px 15px 25px 15px;
-    margin: 0px;
-    font-family: 'Quattrocento', serif;
-}
-    #equipe h2{
-        font-size: 1.8em;
-        margin: 0;
-        text-align: center;
-        color: #2c2c2c4e;
-    }
-
-    #equipe strong{
-        color: #2c2c2c;
-    }
-
-    .equipe-container{
-        width: 80%;
-        height: auto;
-        margin: auto;
-
-        display: flex;
-        /* justify-content: space-between; */
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .equipe .img{
-        width: 200px;
-        height: 200px;
-
-        border-radius: 361px;
-        border: 1px solid #9cc4e3;
-        
-        overflow: hidden;
-
-        margin: auto;
-    }
-        .equipe img{
-            width: auto;
-            height: 100%;
-        }
-
-    .equipe{
-        flex-basis: 25%;
-        margin: 10px auto;
-        /* border: 1px solid #9cc4e3; */
-    }
-
-    .equipe strong{
-        font-size: 1.2em;
-        font-family: 'Oswald', sans-serif;
-    }
-
-    .equipe ul{
-        padding: 0;
-        margin: 0;
-    }
-
-    .equipe ul li{
-        list-style-type: none;
-    }
-
-    @media (max-width: 860px){
-        .equipe{
-            width: 100%;
-            flex-basis: 100%;
-        }
-    }
 
 #contato{
     display: flex;
