@@ -3,81 +3,11 @@
 
     // Script relacionado ao menu da pagina
     let openMenu      = document.getElementById('openMenu');
-    let slideIndex    = 0; 
 
     function menuClick(){
         var menu    = document.getElementById('menu');
         menu.classList.toggle('active');
     }
-    // Fim do script relacionado ao menu da pagina
-
-    // Script relacionado ao carousel de projetos
-    function slideStartGo(){
-        var i;
-        var slides = document.getElementsByClassName("projeto");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].classList.remove('active');
-        }
-        slideIndex++;
-        if (slideIndex > slides.length){
-            slideIndex = 1
-        }
-        slides[slideIndex-1].classList.add('active');
-        setTimeout(slideStartGo, 6000);
-    }
-    // Fim do script de carousel
-
-    // Script relacionado ao get dos artigos
-    function loadPostsFromMedium(){
-        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@witerllandsilva')
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                // Fillter the array
-                const res = data.items //This is an array with the content. No feed, no info about author etc..
-                const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
-                
-                function toText(node) {
-                    let tag = document.createElement('div')
-                    tag.innerHTML = node
-                    node = tag.innerText
-                    return node
-                }
-                function shortenText(text,startingPoint ,maxLength) {
-                return text.length > maxLength?
-                    text.slice(startingPoint, maxLength):
-                    text
-                }
-                
-                let output = '';
-                posts.forEach((item) => {
-                    output += `
-                    <li class="blog__post">
-                        <a href="${item.link}">
-                        <img src="${item.thumbnail}" class="blog__topImg"></img>
-                        <div class="blog__content">
-                            <div class="blog_preview">
-                                <h2 class="blog__title">${shortenText(item.title, 0, 30)+ '...'}</h2>
-                                <p class="blog__intro">${'...' + shortenText(toText(item.content),60, 300)+ '...'}</p>
-                            </div>
-                            <hr>
-                            <div class="blog__info">
-                                <span class="blog__author">${item.author}</span>
-                                <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
-                            </div>
-                        </div>
-                        <a/>
-                    </li>`
-                })
-                document.querySelector('.artigos-container').innerHTML = output
-            });
-    }
-    // Fim do script ao get de artigos 
-
-    // Chamadas das funcoes ao startar a pagina
-    document.addEventListener("DOMContentLoaded", function(e){
-        slideStartGo();
-    });
 
     openMenu.addEventListener("click", function(e){
         e.preventDefault();

@@ -312,13 +312,17 @@ h1{
         font-size: 1.2em;
         padding: 5px 0px;
     }
-        .menuContato li i{
+        .menuContato li i,
+        .menuSocial li i{
             margin-right: 15px;
         }
     .menuSocial{
         margin-top: 15px !important;
     }
     .menuSocial li{
+        list-style-type: none;
+        /* font-size: 1.2em; */
+        padding: 5px 0px;
         display: inline-block;
     }
         .menuSocial a,
@@ -327,7 +331,7 @@ h1{
         .menuSocial a:visited{
             text-decoration: none;
             color: #FFF;
-            font-size: 1.5em;
+            font-size: 3em;
         }
     
     #contato form{
@@ -377,7 +381,7 @@ footer{
     height: 2em;
     width: 100%;
 
-    background-color: #2c2c2cdb; /* rgba(0, 0, 0, 0.85);
+    background-color: #2c2c2cf1; /* rgba(0, 0, 0, 0.85);
     /* border-bottom: 2px solid #FFF; */
     color: #FFF;
 
