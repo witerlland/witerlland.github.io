@@ -15,7 +15,7 @@
     });
 })();
 
-// Script de animacao de scroll
+// Script de animacao de scroll desenvolvido por @origamid
 (function(){
     'use strict';
 
